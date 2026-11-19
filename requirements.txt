@@ -1,0 +1,5 @@
+yt-dlp>=2025.1.1
+# Optional: better word-level captions and hype-word scoring. Without it, YouTube captions are used.
+faster-whisper>=1.0.0
+# Tests only
+pytest>=7

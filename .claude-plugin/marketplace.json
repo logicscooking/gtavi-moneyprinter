@@ -1,0 +1,15 @@
+{
+  "name": "gtavi-moneyprinter",
+  "description": "GTA 6 streams, videos and trends into ready-to-post vertical clips. 21 skills, one install.",
+  "owner": {"name": "logicscooking", "url": "https://github.com/logicscooking"},
+  "plugins": [
+    {
+      "name": "gtavi-moneyprinter",
+      "source": "./",
+      "description": "Find paid clipping campaigns, score moments, cut 1080x1920 clips with hook A/B, check rules, learn from real numbers.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "tags": ["gta6", "clipping", "video", "shorts", "whop"]
+    }
+  ]
+}

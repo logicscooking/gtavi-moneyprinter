@@ -1,0 +1,11 @@
+{
+  "name": "gtavi-moneyprinter",
+  "displayName": "GTA VI Moneyprinter",
+  "version": "1.0.0",
+  "description": "GTA 6 clipping desk: rank paid campaigns by $/hour, score moments with 5 fused signals, cut 9:16 clips with hooks, covers and captions, block re-uploads, learn from real numbers. You approve every post.",
+  "author": {"name": "logicscooking", "url": "https://github.com/logicscooking"},
+  "repository": "https://github.com/logicscooking/gtavi-moneyprinter",
+  "license": "MIT",
+  "keywords": ["gta6", "gtavi", "clipping", "shorts", "whop", "video", "ffmpeg"],
+  "skills": ["./skills/"]
+}

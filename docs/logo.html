@@ -1,0 +1,73 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:transparent}svg{display:block}</style></head><body>
+<svg id="logo" width="1000" height="1000" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#1b0838"/><stop offset=".45" stop-color="#5a1678"/><stop offset=".75" stop-color="#d92f7f"/><stop offset="1" stop-color="#ff8a3d"/>
+  </linearGradient>
+  <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffe259"/><stop offset=".5" stop-color="#ff9a3d"/><stop offset="1" stop-color="#ff2f8e"/>
+  </linearGradient>
+  <linearGradient id="vi" gradientUnits="userSpaceOnUse" x1="0" y1="90" x2="0" y2="400">
+    <stop offset="0" stop-color="#ffd1f0"/><stop offset=".5" stop-color="#ff4fb0"/><stop offset="1" stop-color="#8b3dff"/>
+  </linearGradient>
+  <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <clipPath id="disc"><circle cx="500" cy="500" r="470"/></clipPath>
+  <clipPath id="sunclip"><circle cx="500" cy="470" r="300"/></clipPath>
+</defs>
+<g clip-path="url(#disc)">
+  <rect width="1000" height="1000" fill="url(#sky)"/>
+  <g clip-path="url(#sunclip)">
+    <rect x="200" y="170" width="600" height="600" fill="url(#sun)"/>
+    <g fill="#5a1678"><rect x="200" y="520" width="600" height="14"/><rect x="200" y="570" width="600" height="20"/><rect x="200" y="620" width="600" height="26"/><rect x="200" y="672" width="600" height="32"/></g>
+  </g>
+  <!-- neon VI, original geometric strokes -->
+  <g filter="url(#glow)" fill="none" stroke="url(#vi)" stroke-width="44" stroke-linejoin="miter" shape-rendering="geometricPrecision">
+    <polyline points="300,105 400,385 500,105"/>
+    <line x1="610" y1="105" x2="610" y2="385"/><line x1="575" y1="105" x2="645" y2="105" stroke-width="30"/><line x1="575" y1="385" x2="645" y2="385" stroke-width="30"/>
+  </g>
+  <!-- grid floor -->
+  <rect x="0" y="720" width="1000" height="280" fill="#16052c"/>
+  <g stroke="#ff3e9a" stroke-width="3" opacity=".75" shape-rendering="geometricPrecision">
+    <line x1="0" y1="740" x2="1000" y2="740"/><line x1="0" y1="775" x2="1000" y2="775"/><line x1="0" y1="825" x2="1000" y2="825"/><line x1="0" y1="895" x2="1000" y2="895"/>
+    <line x1="500" y1="720" x2="500" y2="1000"/><line x1="420" y1="720" x2="200" y2="1000"/><line x1="580" y1="720" x2="800" y2="1000"/>
+    <line x1="340" y1="720" x2="-100" y2="1000"/><line x1="660" y1="720" x2="1100" y2="1000"/>
+  </g>
+  <!-- palms -->
+  <g fill="#14042a" shape-rendering="geometricPrecision">
+    <path d="M110 760 C120 640 130 560 150 470 L162 472 C146 560 138 650 132 760Z"/>
+    <path d="M155 470 C110 440 60 450 30 480 C80 455 120 462 155 478Z M155 470 C190 430 240 425 280 445 C235 440 195 450 158 478Z M155 470 C140 420 100 395 60 395 C105 410 130 435 150 476Z M155 470 C175 420 215 400 250 400 C210 415 180 440 160 476Z"/>
+    <path d="M880 760 C872 650 862 580 842 500 L854 498 C872 580 884 650 902 760Z"/>
+    <path d="M846 500 C810 470 760 470 730 495 C775 478 815 485 846 508Z M846 500 C880 462 930 460 965 480 C925 472 885 482 850 508Z M846 500 C835 452 800 430 765 428 C805 445 828 468 842 506Z"/>
+  </g>
+</g>
+<!-- pixel bot (24px grid) -->
+<g transform="translate(296,430)">
+  <!-- antenna -->
+  <rect x="192" y="-48" width="24" height="48" fill="#d8d4ff"/><rect x="180" y="-72" width="48" height="24" fill="#ff3e9a"/>
+  <!-- head -->
+  <rect x="24" y="0" width="360" height="24" fill="#0b0716"/>
+  <rect x="0" y="24" width="408" height="264" fill="#0b0716"/>
+  <rect x="24" y="24" width="360" height="240" fill="#e9e6ff"/>
+  <rect x="24" y="216" width="360" height="48" fill="#c4bdf0"/>
+  <rect x="48" y="48" width="312" height="24" fill="#ffffff"/>
+  <!-- sunglasses -->
+  <rect x="24" y="96" width="360" height="24" fill="#0b0716"/>
+  <rect x="48" y="96" width="144" height="72" fill="#0b0716"/><rect x="216" y="96" width="144" height="72" fill="#0b0716"/>
+  <rect x="72" y="120" width="48" height="24" fill="#ff3e9a"/><rect x="240" y="120" width="48" height="24" fill="#ff3e9a"/>
+  <rect x="72" y="120" width="24" height="24" fill="#ffd1f0"/><rect x="240" y="120" width="24" height="24" fill="#ffd1f0"/>
+  <!-- grin -->
+  <rect x="120" y="192" width="168" height="24" fill="#0b0716"/><rect x="96" y="168" width="24" height="24" fill="#0b0716"/><rect x="288" y="168" width="24" height="24" fill="#0b0716"/>
+  <rect x="168" y="192" width="24" height="24" fill="#ffe259"/>
+  <!-- ears -->
+  <rect x="-24" y="96" width="24" height="96" fill="#8b3dff"/><rect x="408" y="96" width="24" height="96" fill="#8b3dff"/>
+</g>
+<!-- hands + cash fan -->
+<g transform="translate(250,700)">
+  <g transform="rotate(-18 120 60)"><rect x="40" y="0" width="190" height="96" fill="#0b0716"/><rect x="48" y="8" width="174" height="80" fill="#3ddc84"/><rect x="64" y="20" width="142" height="56" fill="#24a862"/><circle cx="135" cy="48" r="20" fill="#3ddc84" shape-rendering="geometricPrecision"/></g>
+  <g transform="rotate(-4 250 60)"><rect x="160" y="-12" width="190" height="96" fill="#0b0716"/><rect x="168" y="-4" width="174" height="80" fill="#3ddc84"/><rect x="184" y="8" width="142" height="56" fill="#24a862"/><text x="255" y="54" font-family="Courier New,monospace" font-weight="900" font-size="46" fill="#bfffd9" text-anchor="middle">$</text></g>
+  <g transform="rotate(14 380 60)"><rect x="290" y="0" width="190" height="96" fill="#0b0716"/><rect x="298" y="8" width="174" height="80" fill="#3ddc84"/><rect x="314" y="20" width="142" height="56" fill="#24a862"/><circle cx="385" cy="48" r="20" fill="#3ddc84" shape-rendering="geometricPrecision"/></g>
+  <rect x="96" y="72" width="72" height="72" fill="#0b0716"/><rect x="104" y="80" width="56" height="56" fill="#e9e6ff"/>
+  <rect x="340" y="72" width="72" height="72" fill="#0b0716"/><rect x="348" y="80" width="56" height="56" fill="#e9e6ff"/>
+</g>
+<circle cx="500" cy="500" r="470" fill="none" stroke="#ff3e9a" stroke-width="10" shape-rendering="geometricPrecision" filter="url(#glow)"/>
+</svg></body></html>
