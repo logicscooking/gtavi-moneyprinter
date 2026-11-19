@@ -171,7 +171,8 @@ def parse_srt(text: str):
 def render_cover(source: Path, out_dir: Path, at: float, hook: str, credit: str, layout: str, face, name: str) -> Path:
     graph, seam = layout_filter(layout, face)
     ass_name = name.rsplit(".", 1)[0] + ".ass"
-    ass = build_ass(hook, [], 5, credit, seam).replace(",78,", ",104,", 1)
+    # No fade-in on a still frame (frame 0 would be transparent), and a bigger hook.
+    ass = build_ass(hook, [], 5, credit, seam).replace(",78,", ",104,", 1).replace("{\\fad(120,0)}", "")
     (out_dir / ass_name).write_text(ass, encoding="utf-8")
     run([need("ffmpeg"), "-y", "-v", "error", "-ss", f"{max(0, at):.2f}", "-i", str(source.resolve()),
          "-filter_complex", f"{graph};[v0]ass={ass_name}[v]", "-map", "[v]", "-frames:v", "1", "-q:v", "3", name],

@@ -117,7 +117,7 @@ def record_result(clip_id: str, hook: int | None = None, cover: int | None = Non
     vs = sorted(x["views"] for x in viewed)
     med = (vs[(len(vs) - 1) // 2] + vs[len(vs) // 2]) / 2 if vs else 0
     styles: dict[str, dict] = {}
-    for x in viewed:
+    for x in (viewed if len(viewed) >= 2 else []):  # one data point can't win or lose
         hooks = x.get("hooks") or []
         i = x["posted_hook"] - 1
         if 0 <= i < len(hooks):
