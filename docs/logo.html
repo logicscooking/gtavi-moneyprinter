@@ -1,246 +1,159 @@
 <!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:transparent}svg{display:block}</style></head><body>
-<svg id="logo" width="1000" height="1000" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<svg id="logo" width="1000" height="1000" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
 <defs>
   <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#1b0838"/><stop offset=".45" stop-color="#5a1678"/><stop offset=".75" stop-color="#d92f7f"/><stop offset="1" stop-color="#ff8a3d"/>
+    <stop offset="0" stop-color="#14062e"/><stop offset=".45" stop-color="#3d1066"/><stop offset=".75" stop-color="#8a1f78"/><stop offset="1" stop-color="#c2307a"/>
   </linearGradient>
   <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#ffe259"/><stop offset=".5" stop-color="#ff9a3d"/><stop offset="1" stop-color="#ff2f8e"/>
+    <stop offset="0" stop-color="#ff7ad1"/><stop offset=".5" stop-color="#c13cff"/><stop offset="1" stop-color="#5a1fb8"/>
   </linearGradient>
-  <linearGradient id="vi" gradientUnits="userSpaceOnUse" x1="0" y1="90" x2="0" y2="400">
-    <stop offset="0" stop-color="#ffd1f0"/><stop offset=".5" stop-color="#ff4fb0"/><stop offset="1" stop-color="#8b3dff"/>
+  <linearGradient id="vi" gradientUnits="userSpaceOnUse" x1="0" y1="190" x2="0" y2="370">
+    <stop offset="0" stop-color="#ff9ee0"/><stop offset=".55" stop-color="#ff3ea8"/><stop offset="1" stop-color="#a33dff"/>
+  </linearGradient>
+  <linearGradient id="front" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f08c4a"/><stop offset=".6" stop-color="#e07a3c"/><stop offset="1" stop-color="#c4622a"/>
+  </linearGradient>
+  <linearGradient id="frontH" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#ff5fb4" stop-opacity=".35"/><stop offset=".18" stop-color="#ff5fb4" stop-opacity="0"/>
+    <stop offset=".75" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#5a1d08" stop-opacity=".22"/>
+  </linearGradient>
+  <linearGradient id="topF" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc08a"/><stop offset="1" stop-color="#f79a5a"/></linearGradient>
+  <linearGradient id="sideF" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9581f"/><stop offset="1" stop-color="#8a3a12"/></linearGradient>
+  <linearGradient id="billG" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#a6f3bd"/><stop offset=".5" stop-color="#5cc982"/><stop offset="1" stop-color="#2f9a5a"/>
   </linearGradient>
   <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="bigglow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="16"/></filter>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="18"/></filter>
+  <filter id="soft4" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4"/></filter>
+  <filter id="grain" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="1" seed="4" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .9 -.42" result="w"/>
+    <feComposite in="w" in2="SourceGraphic" operator="in" result="wi"/>
+    <feComposite in="wi" in2="SourceGraphic" operator="arithmetic" k2=".12" k3="1"/>
+  </filter>
   <clipPath id="disc"><circle cx="500" cy="500" r="470"/></clipPath>
   <clipPath id="sunclip"><circle cx="500" cy="470" r="300"/></clipPath>
+  <g id="bill">
+    <rect x="-90" y="-42" width="180" height="84" rx="7" fill="#0f3520"/>
+    <rect x="-86" y="-38" width="172" height="76" rx="5" fill="url(#billG)"/>
+    <rect x="-75" y="-28" width="150" height="56" rx="4" fill="none" stroke="#1f7a45" stroke-width="3" opacity=".8"/>
+    <ellipse cx="0" cy="0" rx="20" ry="23" fill="#c4f7d3" stroke="#1f7a45" stroke-width="3"/>
+    <text x="0" y="11" font-family="Georgia,serif" font-weight="900" font-size="31" fill="#1f7a45" text-anchor="middle">$</text>
+    <circle cx="-56" cy="-14" r="7" fill="#1f7a45" opacity=".55"/><circle cx="56" cy="14" r="7" fill="#1f7a45" opacity=".55"/>
+    <rect x="-86" y="-38" width="172" height="20" rx="5" fill="#fff" opacity=".2"/>
+  </g>
 </defs>
 <g clip-path="url(#disc)">
   <rect width="1000" height="1000" fill="url(#sky)"/>
   <g clip-path="url(#sunclip)">
-    <rect x="200" y="170" width="600" height="600" fill="url(#sun)"/>
-    <g fill="#5a1678"><rect x="200" y="520" width="600" height="14"/><rect x="200" y="570" width="600" height="20"/><rect x="200" y="620" width="600" height="26"/><rect x="200" y="672" width="600" height="32"/></g>
-  </g>
-  <!-- neon VI, original geometric strokes -->
-  <g filter="url(#glow)" fill="none" stroke="url(#vi)" stroke-width="44" stroke-linejoin="miter" shape-rendering="geometricPrecision">
-    <polyline points="300,105 400,385 500,105"/>
-    <line x1="610" y1="105" x2="610" y2="385"/><line x1="575" y1="105" x2="645" y2="105" stroke-width="30"/><line x1="575" y1="385" x2="645" y2="385" stroke-width="30"/>
+    <rect x="200" y="170" width="600" height="600" fill="url(#sun)" opacity=".9"/>
+    <g fill="#3d1066"><rect x="200" y="520" width="600" height="14"/><rect x="200" y="570" width="600" height="20"/><rect x="200" y="620" width="600" height="26"/><rect x="200" y="672" width="600" height="32"/></g>
   </g>
   <!-- grid floor -->
   <rect x="0" y="720" width="1000" height="280" fill="#16052c"/>
-  <g stroke="#ff3e9a" stroke-width="3" opacity=".75" shape-rendering="geometricPrecision">
+  <g stroke="#ff3e9a" stroke-width="3" opacity=".75">
     <line x1="0" y1="740" x2="1000" y2="740"/><line x1="0" y1="775" x2="1000" y2="775"/><line x1="0" y1="825" x2="1000" y2="825"/><line x1="0" y1="895" x2="1000" y2="895"/>
     <line x1="500" y1="720" x2="500" y2="1000"/><line x1="420" y1="720" x2="200" y2="1000"/><line x1="580" y1="720" x2="800" y2="1000"/>
     <line x1="340" y1="720" x2="-100" y2="1000"/><line x1="660" y1="720" x2="1100" y2="1000"/>
   </g>
   <!-- palms -->
-  <g fill="#14042a" shape-rendering="geometricPrecision">
+  <g fill="#14042a">
     <path d="M110 760 C120 640 130 560 150 470 L162 472 C146 560 138 650 132 760Z"/>
     <path d="M155 470 C110 440 60 450 30 480 C80 455 120 462 155 478Z M155 470 C190 430 240 425 280 445 C235 440 195 450 158 478Z M155 470 C140 420 100 395 60 395 C105 410 130 435 150 476Z M155 470 C175 420 215 400 250 400 C210 415 180 440 160 476Z"/>
     <path d="M880 760 C872 650 862 580 842 500 L854 498 C872 580 884 650 902 760Z"/>
     <path d="M846 500 C810 470 760 470 730 495 C775 478 815 485 846 508Z M846 500 C880 462 930 460 965 480 C925 472 885 482 850 508Z M846 500 C835 452 800 430 765 428 C805 445 828 468 842 506Z"/>
   </g>
-</g>
-<!-- fuzzy orange headphone mascot (painterly SVG) -->
-<defs>
-  <radialGradient id="furBase" cx="0.42" cy="0.35" r="0.75">
-    <stop offset="0" stop-color="#ffb066"/><stop offset=".45" stop-color="#f08a3c"/><stop offset="1" stop-color="#c9601f"/>
-  </radialGradient>
-  <radialGradient id="furHi" cx="0.5" cy="0.5" r="0.5">
-    <stop offset="0" stop-color="#ffd09a" stop-opacity=".9"/><stop offset="1" stop-color="#ffb066" stop-opacity="0"/>
-  </radialGradient>
-  <radialGradient id="furShade" cx="0.5" cy="0.5" r="0.5">
-    <stop offset="0" stop-color="#8f3a10" stop-opacity=".75"/><stop offset="1" stop-color="#8f3a10" stop-opacity="0"/>
-  </radialGradient>
-  <linearGradient id="rimPink" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0" stop-color="#ff4fb0" stop-opacity=".55"/><stop offset=".35" stop-color="#ff4fb0" stop-opacity="0"/>
-    <stop offset=".7" stop-color="#ffe259" stop-opacity="0"/><stop offset="1" stop-color="#ffe259" stop-opacity=".45"/>
-  </linearGradient>
-  <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#c9ccd6"/><stop offset="1" stop-color="#7d8190"/>
-  </linearGradient>
-  <radialGradient id="cupShell" cx="0.38" cy="0.32" r="0.8">
-    <stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#e6e7ee"/><stop offset="1" stop-color="#a7a9b8"/>
-  </radialGradient>
-  <radialGradient id="cupPad" cx="0.5" cy="0.45" r="0.6">
-    <stop offset="0" stop-color="#d9dae2"/><stop offset="1" stop-color="#8e909e"/>
-  </radialGradient>
-  <radialGradient id="eyeG" cx="0.4" cy="0.35" r="0.7">
-    <stop offset="0" stop-color="#3a2a33"/><stop offset=".6" stop-color="#0d0709"/><stop offset="1" stop-color="#000"/>
-  </radialGradient>
-  <linearGradient id="billG" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#9df0b4"/><stop offset=".5" stop-color="#5cc982"/><stop offset="1" stop-color="#2f9a5a"/>
-  </linearGradient>
-  <filter id="fuzz" x="-15%" y="-15%" width="130%" height="130%">
-    <feTurbulence type="fractalNoise" baseFrequency="0.11" numOctaves="3" seed="7" result="n"/>
-    <feDisplacementMap in="SourceGraphic" in2="n" scale="13" xChannelSelector="R" yChannelSelector="G" result="d"/>
-    <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="1" seed="3" result="g"/>
-    <feColorMatrix in="g" type="matrix" values="0 0 0 0 1  0 0 0 0 .85  0 0 0 0 .6  0 0 0 1.2 -0.55" result="ga"/>
-    <feComposite in="ga" in2="d" operator="in" result="gin"/>
-    <feComposite in="gin" in2="d" operator="arithmetic" k2="0.22" k3="1" result="out"/>
-    <feComposite in="out" in2="d" operator="in"/>
-  </filter>
-  <filter id="fuzzS" x="-25%" y="-25%" width="150%" height="150%">
-    <feTurbulence type="fractalNoise" baseFrequency="0.14" numOctaves="2" seed="5" result="n"/>
-    <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
-  </filter>
-  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="14"/></filter>
-  <filter id="soft4" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="4"/></filter>
-  <filter id="paperGrain" x="0" y="0" width="100%" height="100%">
-    <feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="1" seed="11" result="g"/>
-    <feColorMatrix in="g" type="saturate" values="0" result="gs"/>
-    <feComposite in="gs" in2="SourceGraphic" operator="in" result="gi"/>
-    <feBlend in="gi" in2="SourceGraphic" mode="soft-light"/>
-  </filter>
-  <clipPath id="bodyClip"><path id="bodyClipPath"/></clipPath>
-  <g id="bill">
-    <rect x="-100" y="-46" width="200" height="92" rx="7" fill="#123d25"/>
-    <rect x="-96" y="-42" width="192" height="84" rx="5" fill="url(#billG)"/>
-    <rect x="-84" y="-31" width="168" height="62" rx="4" fill="none" stroke="#1f7a45" stroke-width="3" opacity=".8"/>
-    <ellipse cx="0" cy="0" rx="22" ry="25" fill="#bff5cf" stroke="#1f7a45" stroke-width="3"/>
-    <text x="0" y="12" font-family="Georgia,serif" font-weight="900" font-size="34" fill="#1f7a45" text-anchor="middle">$</text>
-    <circle cx="-62" cy="-16" r="8" fill="#1f7a45" opacity=".55"/><circle cx="62" cy="16" r="8" fill="#1f7a45" opacity=".55"/>
-    <rect x="-96" y="-42" width="192" height="22" rx="5" fill="#fff" opacity=".18"/>
+
+  <!-- GTA pill wordmark -->
+  <g>
+    <rect x="352" y="62" width="296" height="112" rx="56" fill="#ff3ea8" opacity=".55" filter="url(#bigglow)"/>
+    <rect x="352" y="62" width="296" height="112" rx="56" fill="#160430" stroke="#ff4fb0" stroke-width="7"/>
+    <rect x="364" y="74" width="272" height="88" rx="44" fill="none" stroke="#ffd1f0" stroke-width="2" opacity=".5"/>
+    <text x="500" y="152" text-anchor="middle" font-family="Impact,'Haettenschweiler','Arial Narrow',sans-serif" font-size="96" letter-spacing="10" fill="#ff3ea8" filter="url(#bigglow)" opacity=".9">GTA</text>
+    <text x="505" y="152" text-anchor="middle" font-family="Impact,'Haettenschweiler','Arial Narrow',sans-serif" font-size="96" letter-spacing="10" fill="#fff" stroke="#ff4fb0" stroke-width="3" paint-order="stroke">GTA</text>
   </g>
-</defs>
 
-<g id="mascot" shape-rendering="geometricPrecision">
-  <!-- back glow so the silhouette pops off the sun -->
-  <path d="M262 735 C238 560 330 440 500 440 C670 440 762 560 738 735 C726 810 620 822 500 822 C380 822 274 810 262 735 Z" fill="#3a0a2e" opacity=".75" transform="translate(500 630) scale(1.07) translate(-500 -630)" filter="url(#soft)"/>
-  <!-- ground shadow -->
-  <ellipse cx="500" cy="842" rx="250" ry="26" fill="#08010f" opacity=".55" filter="url(#soft4)"/>
-
-  <!-- flying bills behind -->
-  <g id="flyBack"></g>
-
-  <!-- legs -->
-  <g id="legs" filter="url(#fuzzS)"></g>
-
-  <!-- body -->
-  <g filter="url(#fuzz)">
-    <path id="bodyPath" fill="url(#furBase)"/>
-    <g clip-path="url(#bodyClip)">
-      <ellipse cx="500" cy="840" rx="300" ry="120" fill="url(#furShade)"/>
-      <ellipse cx="740" cy="660" rx="120" ry="200" fill="url(#furShade)" opacity=".7"/>
-      <ellipse cx="420" cy="500" rx="190" ry="110" fill="url(#furHi)"/>
-      <rect x="240" y="400" width="520" height="440" fill="url(#rimPink)"/>
-      <g id="furInner"></g>
+  <!-- VI: dark outline, glow, neon body, white core -->
+  <g fill="none" stroke-linejoin="miter" stroke-linecap="butt">
+    <g transform="translate(6,10)" stroke="#0b0218" opacity=".7" stroke-width="78" filter="url(#soft4)">
+      <polyline points="298,200 405,352 512,200"/><line x1="640" y1="200" x2="640" y2="352"/><line x1="590" y1="203" x2="690" y2="203" stroke-width="56"/><line x1="590" y1="349" x2="690" y2="349" stroke-width="56"/>
     </g>
-    <g id="furEdge"></g>
+    <g stroke="#1a0533" stroke-width="76">
+      <polyline points="298,200 405,352 512,200"/><line x1="640" y1="200" x2="640" y2="352"/><line x1="590" y1="203" x2="690" y2="203" stroke-width="54"/><line x1="590" y1="349" x2="690" y2="349" stroke-width="54"/>
+    </g>
+    <g stroke="#ff3ea8" stroke-width="62" filter="url(#bigglow)" opacity=".85">
+      <polyline points="298,200 405,352 512,200"/><line x1="640" y1="200" x2="640" y2="352"/>
+    </g>
+    <g stroke="url(#vi)" stroke-width="62">
+      <polyline points="298,200 405,352 512,200"/><line x1="640" y1="200" x2="640" y2="352"/><line x1="590" y1="203" x2="690" y2="203" stroke-width="40"/><line x1="590" y1="349" x2="690" y2="349" stroke-width="40"/>
+    </g>
+    <g stroke="#fff" stroke-width="22">
+      <polyline points="298,200 405,352 512,200"/><line x1="640" y1="200" x2="640" y2="352"/><line x1="600" y1="203" x2="680" y2="203" stroke-width="12"/><line x1="600" y1="349" x2="680" y2="349" stroke-width="12"/>
+    </g>
   </g>
 
-  <!-- cheeks -->
-  <ellipse cx="380" cy="640" rx="34" ry="18" fill="#ff5f7e" opacity=".35" filter="url(#soft4)"/>
-  <ellipse cx="620" cy="640" rx="34" ry="18" fill="#ff5f7e" opacity=".35" filter="url(#soft4)"/>
-
-  <!-- eyes -->
-  <g>
-    <ellipse cx="408" cy="590" rx="25" ry="33" fill="url(#eyeG)"/>
-    <ellipse cx="592" cy="590" rx="25" ry="33" fill="url(#eyeG)"/>
-    <ellipse cx="398" cy="576" rx="9" ry="12" fill="#fff"/><circle cx="414" cy="604" r="4" fill="#fff" opacity=".7"/>
-    <ellipse cx="582" cy="576" rx="9" ry="12" fill="#fff"/><circle cx="598" cy="604" r="4" fill="#fff" opacity=".7"/>
+  <!-- MASCOT -->
+  <g id="mascot" transform="translate(0 10)">
+    <!-- dark halo -->
+    <rect x="250" y="410" width="520" height="420" rx="60" fill="#0d0326" opacity=".8" filter="url(#soft)"/>
+    <!-- ground shadow -->
+    <ellipse cx="505" cy="905" rx="250" ry="24" fill="#05010c" opacity=".7" filter="url(#soft4)"/>
+    <!-- flying bills -->
+    <use href="#bill" transform="translate(175 430) rotate(-24) scale(.55)"/>
+    <use href="#bill" transform="translate(835 440) rotate(22) scale(.55)"/>
+    <use href="#bill" transform="translate(150 640) rotate(14) scale(.5)"/>
+    <use href="#bill" transform="translate(860 650) rotate(-18) scale(.5)"/>
+    <!-- legs (2 pairs) -->
+    <g stroke-linejoin="round">
+      <g id="leg"><rect x="0" y="0" width="30" height="110" rx="5" fill="url(#front)"/><path d="M30 4 L42 -6 L42 98 L30 110Z" fill="url(#sideF)"/></g>
+      <use href="#leg" transform="translate(326 776)"/><use href="#leg" transform="translate(370 776)"/>
+      <use href="#leg" transform="translate(594 776)"/><use href="#leg" transform="translate(638 776)"/>
+      <!-- rear pair hint -->
+    </g>
+    <g filter="url(#grain)">
+      <!-- body: top, side, front -->
+      <path d="M296 470 L336 432 L716 432 L676 470Z" fill="url(#topF)" stroke="url(#topF)" stroke-width="10" stroke-linejoin="round"/>
+      <path d="M676 470 L716 432 L716 748 L676 786Z" fill="url(#sideF)" stroke="#a24b18" stroke-width="10" stroke-linejoin="round"/>
+      <rect x="292" y="466" width="388" height="324" rx="14" fill="url(#front)"/>
+      <rect x="292" y="466" width="388" height="324" rx="14" fill="url(#frontH)"/>
+      <!-- edge highlights / rim light -->
+      <path d="M300 468 L672 468" stroke="#ffd7b0" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+      <path d="M294 476 L294 780" stroke="#ff7cc6" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+      <path d="M718 436 L718 746" stroke="#ff9ad6" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+      <path d="M338 432 L714 432" stroke="#fff0dc" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+    </g>
+    <!-- chevron eyes -->
+    <g fill="none" stroke="#120a0a" stroke-width="17" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="386,540 428,566 386,592"/>
+      <polyline points="590,540 548,566 590,592"/>
+    </g>
+    <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".5">
+      <path d="M390 536 L424 557"/><path d="M586 536 L552 557"/>
+    </g>
+    <!-- cash fan across the front -->
+    <use href="#bill" transform="translate(352 712) rotate(-16)"/>
+    <use href="#bill" transform="translate(420 694) rotate(-8)"/>
+    <use href="#bill" transform="translate(620 712) rotate(16)"/>
+    <use href="#bill" transform="translate(552 694) rotate(8)"/>
+    <use href="#bill" transform="translate(486 688)"/>
+    <!-- side nubs (arms) gripping the fan -->
+    <g stroke-linejoin="round">
+      <rect x="248" y="664" width="66" height="52" rx="8" fill="url(#front)" stroke="#8a3a12" stroke-width="3"/>
+      <path d="M252 666 L264 654 L320 654 L312 666Z" fill="url(#topF)"/>
+      <rect x="226" y="676" width="30" height="34" rx="6" fill="#c96a30" stroke="#8a3a12" stroke-width="3"/>
+      <rect x="662" y="664" width="66" height="52" rx="8" fill="url(#front)" stroke="#8a3a12" stroke-width="3"/>
+      <path d="M666 666 L678 654 L734 654 L726 666Z" fill="url(#topF)"/>
+      <rect x="722" y="676" width="30" height="34" rx="6" fill="url(#sideF)" stroke="#8a3a12" stroke-width="3"/>
+    </g>
+    <!-- sparkles -->
+    <g fill="#fff6c8">
+      <path d="M250 360 l5 14 14 5 -14 5 -5 14 -5 -14 -14 -5 14 -5Z"/>
+      <path d="M760 350 l4 12 12 4 -12 4 -4 12 -4 -12 -12 -4 12 -4Z"/>
+      <path d="M120 560 l4 11 11 4 -11 4 -4 11 -4 -11 -11 -4 11 -4Z"/>
+      <path d="M885 560 l4 11 11 4 -11 4 -4 11 -4 -11 -11 -4 11 -4Z"/>
+    </g>
   </g>
-
-  <!-- headphones band -->
-  <path d="M276 560 C262 368 738 368 724 560" fill="none" stroke="#3b3d48" stroke-width="34" stroke-linecap="round"/>
-  <path d="M276 560 C262 368 738 368 724 560" fill="none" stroke="url(#silver)" stroke-width="26" stroke-linecap="round"/>
-  <path d="M300 470 C330 400 670 400 700 470" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".85"/>
-  <!-- band sliders -->
-  <rect x="262" y="500" width="30" height="62" rx="10" fill="url(#silver)" stroke="#3b3d48" stroke-width="4"/>
-  <rect x="708" y="500" width="30" height="62" rx="10" fill="url(#silver)" stroke="#3b3d48" stroke-width="4"/>
-
-  <!-- left earcup -->
-  <g>
-    <ellipse cx="270" cy="600" rx="60" ry="84" fill="#5a5c6a"/>
-    <ellipse cx="266" cy="597" rx="55" ry="79" fill="url(#cupShell)"/>
-    <ellipse cx="296" cy="600" rx="22" ry="70" fill="url(#cupPad)" opacity=".9"/>
-    <ellipse cx="248" cy="566" rx="16" ry="26" fill="#fff" opacity=".8" filter="url(#soft4)"/>
-  </g>
-  <!-- right earcup with sunburst -->
-  <g>
-    <ellipse cx="730" cy="600" rx="60" ry="84" fill="#5a5c6a"/>
-    <ellipse cx="734" cy="597" rx="55" ry="79" fill="url(#cupShell)"/>
-    <ellipse cx="704" cy="600" rx="22" ry="70" fill="url(#cupPad)" opacity=".9"/>
-    <g id="sunburst" transform="translate(742,598)" stroke="#f0782a" stroke-width="5.5" stroke-linecap="round"></g>
-    <circle cx="742" cy="598" r="6" fill="#f0782a"/>
-    <ellipse cx="722" cy="562" rx="14" ry="22" fill="#fff" opacity=".8" filter="url(#soft4)"/>
-  </g>
-
-  <!-- boom mic -->
-  <path d="M262 660 C262 712 330 720 404 690" fill="none" stroke="#000" stroke-width="13" stroke-linecap="round"/>
-  <path d="M262 660 C262 712 330 720 404 690" fill="none" stroke="#3a3a44" stroke-width="5" stroke-linecap="round" transform="translate(-1,-3)" opacity=".8"/>
-  <ellipse cx="414" cy="686" rx="20" ry="15" fill="#0b0b10" transform="rotate(-18 414 686)"/>
-  <ellipse cx="408" cy="680" rx="7" ry="4" fill="#666" transform="rotate(-18 408 680)"/>
-
-  <!-- cash fan in front -->
-  <g id="fan"></g>
-  <!-- paws on the bills -->
-  <g filter="url(#fuzzS)">
-    <ellipse cx="444" cy="770" rx="30" ry="23" fill="#c9601f"/><ellipse cx="442" cy="766" rx="27" ry="20" fill="#f59445"/><ellipse cx="436" cy="760" rx="13" ry="8" fill="#ffc68a"/>
-    <ellipse cx="556" cy="770" rx="30" ry="23" fill="#c9601f"/><ellipse cx="554" cy="766" rx="27" ry="20" fill="#f59445"/><ellipse cx="548" cy="760" rx="13" ry="8" fill="#ffc68a"/>
-  </g>
-
-  <!-- flying bills front + sparkles -->
-  <g id="flyFront"></g>
 </g>
-<circle cx="500" cy="500" r="470" fill="none" stroke="#ff3e9a" stroke-width="10" shape-rendering="geometricPrecision" filter="url(#glow)"/>
-</svg><script>
-(function(){
-  const NS='http://www.w3.org/2000/svg';
-  let s=1234567; const R=()=>{s=(s*16807)%2147483647;return s/2147483647;};
-  const el=(t,a,p)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p&&p.appendChild(e);return e;};
-  const body='M262 735 C238 560 330 440 500 440 C670 440 762 560 738 735 C726 810 620 822 500 822 C380 822 274 810 262 735 Z';
-  document.getElementById('bodyPath').setAttribute('d',body);
-  document.getElementById('bodyClipPath').setAttribute('d',body);
-  const bp=document.getElementById('bodyPath'), L=bp.getTotalLength();
-  const edge=document.getElementById('furEdge'), inner=document.getElementById('furInner');
-  const pal=['#c9601f','#e07a30','#f08a3c','#ffa257','#ffb066','#d86d27'];
-  // edge tufts
-  for(let i=0;i<900;i++){
-    const t=R()*L, p=bp.getPointAtLength(t), q=bp.getPointAtLength((t+1)%L);
-    let nx=q.y-p.y, ny=-(q.x-p.x); const n=Math.hypot(nx,ny)||1; nx/=n; ny/=n; // outward (path is clockwise)
-    const len=8+R()*18, a=(R()-.5)*0.9, ca=Math.cos(a), sa=Math.sin(a);
-    const dx=nx*ca-ny*sa, dy=nx*sa+ny*ca;
-    const sx=p.x-dx*6, sy=p.y-dy*6, ex=p.x+dx*len, ey=p.y+dy*len;
-    const lit = (p.x<520 && p.y<620);
-    const c = p.y>740 ? pal[R()<.6?0:5] : (lit? pal[3+Math.floor(R()*2)] : pal[1+Math.floor(R()*3)]);
-    el('path',{d:`M${sx} ${sy} Q${(sx+ex)/2+(R()-.5)*8} ${(sy+ey)/2+(R()-.5)*8} ${ex} ${ey}`,stroke:c,'stroke-width':2+R()*3,'stroke-linecap':'round',fill:'none'},edge);
-  }
-  // interior strokes for painterly fur
-  for(let i=0;i<900;i++){
-    const x=250+R()*500, y=440+R()*390;
-    const dxc=(x-500)/250, dyc=(y-600)/200;
-    const ang=Math.atan2(dyc,dxc)+(R()-.5)*0.8, len=6+R()*12;
-    const light = (x<520&&y<640) ? R()<.75 : R()<.25;
-    const c = light ? (R()<.5?'#ffc88f':'#ffb066') : (y>720||x>660 ? '#c9601f' : '#e47c33');
-    el('path',{d:`M${x} ${y} l${Math.cos(ang)*len} ${Math.sin(ang)*len}`,stroke:c,'stroke-width':1.5+R()*2.2,'stroke-linecap':'round',opacity:.25+R()*.35},inner);
-  }
-  // legs
-  const legs=document.getElementById('legs');
-  [[340,808],[428,822],[572,822],[660,808]].forEach(([x,y])=>{
-    el('ellipse',{cx:x,cy:y+12,rx:30,ry:26,fill:'#b4521a'},legs);
-    el('ellipse',{cx:x-4,cy:y+6,rx:24,ry:18,fill:'#e07a30'},legs);
-    el('ellipse',{cx:x-8,cy:y+2,rx:11,ry:7,fill:'#ffb066',opacity:.8},legs);
-  });
-  // sunburst: 12 thin rays
-  const sb=document.getElementById('sunburst');
-  for(let k=0;k<12;k++){const a=k*Math.PI/6; el('line',{x1:Math.cos(a)*9,y1:Math.sin(a)*9,x2:Math.cos(a)*32,y2:Math.sin(a)*32*1.05},sb);}
-  // fan of bills held in front (pivot below paws)
-  const fan=document.getElementById('fan');
-  [-28,-14,0,14,28].forEach((d,i)=>{
-    const u=el('use',{href:'#bill',transform:`translate(500 790) rotate(${d}) translate(0 -92) scale(.95)`},fan);
-  });
-  // flying bills
-  const fb=document.getElementById('flyBack'), ff=document.getElementById('flyFront');
-  const fly=(p,x,y,r,sc)=>{
-    const g=el('g',{transform:`translate(${x} ${y}) rotate(${r}) scale(${sc})`},p);
-    el('use',{href:'#bill',transform:'translate(6 10)',opacity:.35,style:'filter:blur(3px)'},g).setAttribute('fill','#000');
-    el('use',{href:'#bill'},g);
-  };
-  fly(fb,205,375,-24,.52); fly(fb,812,355,22,.5);
-  fly(ff,170,690,16,.5); fly(ff,836,700,-20,.52);
-  // speed ticks / sparkles
-  const sp=(x,y,r)=>{el('path',{d:`M${x} ${y-r} L${x+r*.28} ${y-r*.28} L${x+r} ${y} L${x+r*.28} ${y+r*.28} L${x} ${y+r} L${x-r*.28} ${y+r*.28} L${x-r} ${y} L${x-r*.28} ${y-r*.28}Z`,fill:'#fff6c8',opacity:.95},ff);};
-  sp(265,300,14); sp(745,290,12); sp(120,600,10); sp(890,610,11);
-})();
-</script>
-</body></html>
+<circle cx="500" cy="500" r="470" fill="none" stroke="#ff3e9a" stroke-width="10" filter="url(#glow)"/>
+</svg></body></html>

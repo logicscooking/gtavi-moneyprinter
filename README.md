@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/logo-v2.png" width="300" alt="gtavi-moneyprinter logo: fuzzy orange mascot in headphones holding cash in front of a neon VI sunset">
+<img src="docs/logo-v3.png" width="300" alt="gtavi-moneyprinter logo: orange box mascot holding cash under a neon GTA VI sign">
 
 <h1 align="center">gtavi-moneyprinter</h1>
 
