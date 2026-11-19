@@ -6,7 +6,7 @@
 
 <h2 align="center">Rockstar built the game.<br>Grok Bot prints you the money.</h2>
 
-<p align="center">GTA 6 is the biggest launch the internet has ever clipped. Send this repo to Grok Bot or Claude Code and it ranks the paid campaigns by dollars per hour, finds the moments chat lost it over, cuts 9:16 clips with 3 hooks and 3 covers each, blocks anything a campaign would reject, and learns which hooks actually win. One command, a folder per clip, you hit post.</p>
+<p align="center">GTA 6 is the biggest launch the internet has ever clipped. Grok Bot finds the moments chat lost it over and hands you finished 9:16 clips with hooks, covers and credits. Campaigns pay per 1,000 views. You just hit post.</p>
 
 <p align="center"><img src="https://img.shields.io/badge/Grok_Bot_+_Claude_Code-ready-ff3e8a" alt="Grok Bot + Claude Code: ready"> <img src="https://img.shields.io/badge/skills-21-8b3dff" alt="skills: 21"> <img src="https://img.shields.io/badge/clips-1080x1920-ff8a3d" alt="clips: 1080x1920"> <img src="https://img.shields.io/badge/languages-6-ff3e8a" alt="languages: 6"> <img src="https://img.shields.io/badge/GTA_6-Nov_19-8b3dff" alt="GTA 6: Nov 19"> <img src="https://img.shields.io/badge/license-MIT-ff8a3d" alt="license: MIT"></p>
 
