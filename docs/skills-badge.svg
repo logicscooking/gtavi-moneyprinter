@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="72" viewBox="0 0 380 72">
+  <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#ff3e8a"/><stop offset="1" stop-color="#8b3dff"/></linearGradient></defs>
+  <rect x="2" y="2" width="376" height="68" rx="14" fill="#f6f0ff" stroke="url(#g)" stroke-width="3"/>
+  <g fill="#6b2fd6" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+    <path d="M30 22c-6 6-6 22 2 28M26 28c-4 2-4 6 0 8M27 40c-4 1-4 5 0 7M64 22c6 6 6 22-2 28M68 28c4 2 4 6 0 8M67 40c4 1 4 5 0 7" stroke="#6b2fd6" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <text x="47" y="43" font-size="20" font-weight="800" text-anchor="middle">21</text>
+    <text x="230" y="29" font-size="11" font-weight="700" letter-spacing="1.6" text-anchor="middle" fill="#8b3dff">GROK BOT + CLAUDE CODE PLUGIN</text>
+    <text x="230" y="51" font-size="17" font-weight="800" text-anchor="middle" fill="#3b1a8a">21 Skills In One Install</text>
+  </g>
+</svg>

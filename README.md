@@ -10,7 +10,7 @@
 
 <p align="center"><img src="https://img.shields.io/badge/Grok_Bot_+_Claude_Code-ready-ff3e8a" alt="Grok Bot + Claude Code: ready"> <img src="https://img.shields.io/badge/skills-21-8b3dff" alt="skills: 21"> <img src="https://img.shields.io/badge/clips-1080x1920-ff8a3d" alt="clips: 1080x1920"> <img src="https://img.shields.io/badge/languages-6-ff3e8a" alt="languages: 6"> <img src="https://img.shields.io/badge/GTA_6-Nov_19-8b3dff" alt="GTA 6: Nov 19"> <img src="https://img.shields.io/badge/license-MIT-ff8a3d" alt="license: MIT"></p>
 
-<table align="center"><tr><td align="center" bgcolor="#8b3dff">&nbsp;&nbsp;<b>21 SKILLS IN ONE INSTALL</b>&nbsp;&nbsp;</td></tr></table>
+<p align="center"><img src="docs/skills-badge.svg" width="380" alt="21 skills in one install"></p>
 
 <p align="center"><a href="#first-run-paste-this-into-grok-bot-or-claude-code">Quick start</a> · <a href="#ways-to-make-money">Make money</a> · <a href="#whats-inside">Skills</a> · <a href="#why-this-beats-other-clipping-repos">Why it's better</a> · <a href="#clip-rules">Clip rules</a> · <a href="#scripts">Scripts</a></p>
 
