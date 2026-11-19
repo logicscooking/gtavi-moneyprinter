@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/logo.png" width="300" alt="gtavi-moneyprinter logo: pixel bot in sunglasses holding cash in front of a neon VI sunset">
+<img src="docs/logo-v2.png" width="300" alt="gtavi-moneyprinter logo: fuzzy orange mascot in headphones holding cash in front of a neon VI sunset">
 
 <h1 align="center">gtavi-moneyprinter</h1>
 
