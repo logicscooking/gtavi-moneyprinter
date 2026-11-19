@@ -4,7 +4,7 @@
 
 <h1 align="center">gtavi-moneyprinter</h1>
 
-<p align="center"><b>Rockstar built Leonida.<br>Your agent prints the clips.</b></p>
+<h2 align="center">Rockstar built the game.<br>Grok Bot prints you the money.</h2>
 
 <p align="center">GTA 6 is the biggest launch the internet has ever clipped. Send this repo to Grok Bot or Claude Code and it ranks the paid campaigns by dollars per hour, finds the moments chat lost it over, cuts 9:16 clips with 3 hooks and 3 covers each, blocks anything a campaign would reject, and learns which hooks actually win. One command, a folder per clip, you hit post.</p>
 
